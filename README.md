@@ -1,12 +1,13 @@
 # XTC generator
 
 for some reason or another I just couldn't get the website generator or the other python generator to run. Hencce the creation of this. It uses calibre to convert the epubs to pdf in a certain size first then converts that pdf into an xtc file format by splitting the images out first then creating the xtc file based on the folder of images.
+
 ---
 
 # Disclaimer
 
-`creatextc.py` is fully ai generated based on the spec which is ai generated. but so far everything works :D
-`main.py` is partially ai generated
+`creatextc.py` is fully ai generated based on the spec which is ai generated. but so far everything works :D\
+`main.py` is mostly ai generated
 
 ---
 
@@ -23,15 +24,20 @@ pip install -r requirements.txt
 
 Steps:
 
-- Convert your books to pdf format using calibre
-    make sure the size of the page is 480x800 points
-    This can be set under PDF output > Custom Size: "480x800" then change the units to points
-- Export the books into the folder "books" 
-    `select all books > right click books > save to disk > export single format to disk`
-    does not matter where the pdf folder is in the books as the code will search all subfolders
+- Convert your books to pdf format using calibre\
+    make sure the size of the page is `480x800 points`
+This can be set under
+  ```
+  PDF output > Custom Size: "480x800" then change the units to points
+  ```
+- Export the books into the folder `books` 
+    ```
+    select all books > right click books > save to disk > export single format to disk
+    ```
+    does not matter where the pdf folder is in the `books` folder as the code will search all subfolders
 - Run `main.py` with python3
     ```bash
-python3 main.py
+    python3 main.py
     ```
 
 `main.py` crawls through the books directory for pdf to format
